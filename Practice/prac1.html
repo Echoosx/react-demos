@@ -17,5 +17,27 @@
     );
   </script>
 
+  <div id="component"></div>
+  <script type="text/babel">
+    // 老版本写法
+    // var Helloworld = React.createClass({
+    //   render:function(){
+    //     return <h1>Hello {this.props.name}</h1>;
+    //   }
+    // });
+
+    // 新版本写法
+    class Hellodare extends React.Component{
+      render(){
+        return <h1>Hello {this.props.name}</h1>;
+      }
+    }
+
+    ReactDOM.render(
+      <Hellodare name="Seyana"></Hellodare>,
+      document.getElementById('component')
+    );
+  </script>
+
 </body>
 </html>
